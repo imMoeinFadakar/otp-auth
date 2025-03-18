@@ -1,5 +1,8 @@
 {
     "require": {
-        "rakit/validation": "*"
+        "rakit/validation": "^1.4",
+        "phpmailer/phpmailer": "^6.9",
+        "nesbot/carbon": "^3.8",
+        "kavenegar/php": "^1.2"
     }
 }

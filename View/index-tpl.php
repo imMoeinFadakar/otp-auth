@@ -9,8 +9,17 @@
 </head>
 
 <body>
+
+    <?php 
+        if(isset($wellcome_message)){
+
+            echo $wellcome_message;
+
+        }
+    ?>
+
     <h1 style="text-align: center;">User Profile</h1>
-    <a href="">Logout</a>
+    <a href="logout">Logout</a>
     <ul>
 
     </ul>

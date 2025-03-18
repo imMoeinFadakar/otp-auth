@@ -13,6 +13,22 @@
 
 <body>
     <!-- Section: Design Block -->
+     <?php 
+   if(isset($errors)){
+    $errorMessages = $errors->all();
+    foreach($errorMessages as $error){
+
+        echo "".$error."";
+
+    }
+    unset($errors);
+}
+
+if(isset($user_token_isnt_exists_message)){
+    echo "".$user_token_isnt_exists_message."";
+}
+
+     ?>
     <section class="background-radial-gradient overflow-hidden">
         <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
             <div class="row gx-lg-5 align-items-center mb-5 justify-content-center">
@@ -30,7 +46,7 @@
 
                     <div class="card bg-glass">
                         <div class="card-body px-4 py-5 px-md-5">
-                            <form action="" method="post">
+                            <form action="post-verify" method="post">
                                 <!-- Token input -->
                                 <div class="form-outline mb-4">
                                     <input type="text" name="token" id="token" class="form-control" />

@@ -13,13 +13,27 @@
 </head>
 
 <body>
-    <?php 
-        if(isset($error)){
+        <?php 
+        if(isset($errors)){
 
-            echo " ".$error." ";
-            unset($error);
+
+            $errorArray =  $errors->all();  
+
+            foreach ($errorArray as $errorArrayUnite){
+    
+                echo $errorArrayUnite . "<br>";
+    
+            }
+
         }
-    ?>
+        if(isset($message)){
+
+            echo $message;
+            unset($message);
+        }
+
+        ?>  
+
     <!-- Section: Design Block -->
     <section class="background-radial-gradient overflow-hidden">
         <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
@@ -38,7 +52,7 @@
 
                     <div class="card bg-glass">
                         <div class="card-body px-4 py-5 px-md-5">
-                            <form  method="post" action="./../logic/proccess_register.php"  >
+                            <form  method="post" action="/post-register"  >
                                 <!-- Name input -->
                                 <div class="form-outline mb-4">
                                     <input type="text" name="name" id="name" class="form-control" />
